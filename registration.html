@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <style>
+      * {
+    padding: 0;
+    margin: 0;
+    color: #1a1f36;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif;
+  }
+  body {
+      min-height: 100%;
+      background-color: #ffffff;
+  }
+  h1 {
+      letter-spacing: -1px;
+  }
+  a {
+    color: #5469d4;
+    text-decoration: unset;
+  }
+  .flex-flex {
+      display: flex;
+  }
+  .align-center {
+    align-items: center; 
+  }
+  .center-center {
+    align-items: center;
+    justify-content: center;
+  }
+  .box-root {
+      box-sizing: border-box;
+  }
+  .flex-direction--column {
+      -ms-flex-direction: column;
+      flex-direction: column;
+  }
+
+
+  .padding-bottom--24 {
+    padding-bottom: 24px;
+  }
+  .padding-horizontal--48 {
+    padding: 48px;
+  }
+
+  
+  
+  .flex-justifyContent--center {
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  
+  .formbg {
+      margin: 0px auto;
+      width: 100%;
+      max-width: 448px;
+      background: white;
+      border-radius: 4px;
+      box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+  }
+  span {
+      display: block;
+      font-size: 20px;
+      line-height: 28px;
+      color: #1a1f36;
+  }
+  label {
+      margin-bottom: 10px;
+  }
+  .reset-pass a,label {
+      font-size: 14px;
+      font-weight: 600;
+      display: block;
+  }
+  .reset-pass > a {
+      text-align: right;
+      margin-bottom: 10px;
+  }
+  .grid--50-50 {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      align-items: center;
+  }
+  
+  .field input {
+      font-size: 16px;
+      line-height: 28px;
+      padding: 8px 16px;
+      width: 100%;
+      min-height: 44px;
+      border: unset;
+      border-radius: 4px;
+      outline-color: rgb(84 105 212 / 0.5);
+      background-color: rgb(255, 255, 255);
+      box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                  rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                  rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                  rgba(60, 66, 87, 0.16) 0px 0px 0px 1px, 
+                  rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                  rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                  rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+  }
+  
+  input[type="submit"] {
+      background-color: rgb(84, 105, 212);
+      box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                  rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                  rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, 
+                  rgb(84, 105, 212) 0px 0px 0px 1px, 
+                  rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                  rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
+                  rgba(60, 66, 87, 0.08) 0px 2px 5px 0px;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+  }
+  .field-checkbox input {
+      width: 20px;
+      height: 15px;
+      margin-right: 5px; 
+      box-shadow: unset;
+      min-height: unset;
+  }
+  .field-checkbox label {
+      display: flex;
+      align-items: center;
+      margin: 0;
+  }
+    </style>
+    <a href="./project">Projects</a>
+    <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+      <h1>Registration Form</h1>
+    </div>
+    <div class="formbg-outer">
+      <div class="formbg">
+        <div class="formbg-inner padding-horizontal--48">
+        <form id="regform">
+          <div class="field padding-bottom--24">
+          <label for="name">Name</label>
+          <input required type="text" name="name" id="name" />
+          </div>
+          <div class="field padding-bottom--24">
+          <label for="email">Email</label>
+          <input required type="email" name="email" id="email" />
+          </div>
+          <div class="field padding-bottom--24">
+          <label for="password">Password</label>
+          <input required type="password" name="password" id="password" />
+          </div>
+          <div class="field padding-bottom--24">
+          <label for="dob">DOB</label>
+          <input required
+            type="date"
+            name="dob"
+            id="dob"
+            min="1967-09-04"
+            max="2004-09-04"
+          />
+          </div>
+          <div class="field field-checkbox padding-bottom--24 flex-flex align-center">
+          <input
+            style="width: 40px"
+            type="checkbox"
+            name="acceptTerms"
+            id="acceptTerms"
+          />
+          <label for="acceptTerms">I Accept terms & Conditions</label>
+          </div>
+          <div class="field padding-bottom--24">
+          <input type="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="entrytable"></div>
+    <script type="text/javascript">function validateAge(today, dobobj) {
+      var age = today.getFullYear() - dobobj.getFullYear();
+      var mn = today.getMonth() - dobobj.getMonth();
+      if (mn < 0 || (mn === 0 && today.getDate() < dobobj.getDate())) {
+        age--;
+      }
+      return age;
+    }
+    let dobele = document.getElementById("dob");
+    dobele.addEventListener("change", () => {
+      let [y,m,d] = document.getElementById("dob").value.split("-");
+      let dob = new Date(y,m,d);
+      let today = new Date();
+      age = validateAge(today, dob);
+      if (age < 18 || age > 55) {
+        dobele.setCustomValidity("Age must be between 18 and 55");
+     
+        return;
+      } else {
+        dobele.setCustomValidity("");
+      }
+    });
+    let form = document.getElementById("regform");
+    
+    const retriveEntries = () => {
+      let entries = localStorage.getItem("userData");
+    
+      if (entries) {
+        entries = JSON.parse(entries);
+      } else {
+        entries = [];
+      }
+      return entries;
+    };
+    
+    let Entries = retriveEntries();
+    
+    const displayEntries = () => {
+      const entries = retriveEntries();
+    
+      const tablerows = entries
+        .map((entry) => {
+          const name = `<td>${entry.name}</td>`;
+          const email = `<td>${entry.email}</td>`;
+          const password = `<td>${entry.password}</td>`;
+          const dob = `<td>${entry.dob}</td>`;
+          const terms = `<td>${entry.terms}</td>`;
+    
+          const row = `<tr>${name} ${email} ${password} ${dob} ${terms}</tr>`;
+          return row;
+        })
+        .join("\n");
+    
+      let tableDiv = document.getElementById("entrytable");
+    
+      tableDiv.innerHTML = `<table>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Dob</th>
+        <th>Accepted terms?</th>
+      </tr>
+        ${tablerows}
+      </table>`;
+    };
+    
+    
+    const saveUserFrom = (event) => {
+      event.preventDefault();
+    
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+      let dob = document.getElementById("dob").value;
+      let terms = document.getElementById("acceptTerms").checked;
+    
+      let entryobj = {
+        name,
+        email,
+        password,
+        dob,
+        terms,
+      };
+    
+      Entries.push(entryobj);
+    
+      localStorage.setItem("userData", JSON.stringify(Entries));
+    
+      displayEntries();
+    };
+    
+    form.addEventListener("submit", saveUserFrom);
+    
+    displayEntries();</script>
+  </body>
+</html>
